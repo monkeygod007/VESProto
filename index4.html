@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Executive Summit 2014</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" href="css/JR.css" media="screen">
+    <script src="js/modernizr.custom.js"></script>
+	<style>
+	body {
+		padding:0;
+	}
+	
+	.container {
+		margin-left:auto;
+		margin-right:auto;	
+		max-width:980px;
+	}
+	
+	@media only screen and (max-width: 480px) {
+		body {
+			width:100%;	
+		}
+
+	}
+	
+	@media only screen and (max-width: 979px) {
+		p {
+			margin-left:10px;
+			margin-right:10px;	
+		}
+	}
+	
+	@media only screen and (min-width: 980px) {
+		body {
+			width:980px;	
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+	
+	#trackBar {
+		margin-bottom:2em;
+		border-bottom:solid 1px #000;
+		border-top: solid 1px #000;	
+		height:4em;
+	}
+	
+	#trackBar p {
+		margin-top:1em;
+		margin-right:1em;
+		float:left;	
+		border-top-style:solid;
+		border-top-width:2px;
+		border-top-color:transparent;
+
+	}
+	
+	#trackBar ul {
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+	
+	#trackBar ul li {
+		float:left;
+		padding-left:1em;	
+		padding-right:1em;
+		margin-left:1em;
+		margin-right:1em;
+		margin-top:1em;
+		border-style:solid;
+		border-width:2px;
+		border-radius:5px;
+		border-color:transparent;
+		cursor:pointer;
+	}
+		
+	#trackBar ul li.on {
+		color:#fff;
+	}
+
+	/* begin specific colors */
+	#trackBar ul #development:hover {
+		border-color:#a1c500;
+	}
+	
+	.development .agenda-desc,  #development{
+		color:#a1c500;
+	}
+
+	#development.on {
+		background-color:#a1c500;
+	}
+		
+	#trackBar ul #QA:hover {
+		border-color:#7f66c3;
+	}
+	
+	#QA.on {
+		background-color:#7f66c3;
+	}
+	
+	.QA .agenda-desc,  #QA {
+		color:#7f66c3;
+	}
+	
+	#trackBar ul #inside:hover {
+		border-color:#bfa42a;
+	}
+	
+	#inside.on {
+		background-color:#bfa42a;
+	}
+	
+	.inside .agenda-desc, #inside {
+		color:#bfa42a;	
+	}
+	
+	#trackBar ul #mission:hover {
+		border-color:#ee802a;
+	}
+	
+	#mission.on {
+		background-color:#ee802a;
+	}
+	
+	.mission .agenda-desc, #mission {
+	color:#ee802a;	
+	}
+	
+	#trackBar ul #all:hover {
+		border-color:#000000;
+	}
+
+	#all.on {
+		background-color:#000000;
+	}
+
+	
+	.agenda-item {
+		clear:both;
+	}
+	
+	.agenda-time {
+	float:left;
+	width:20%;
+	margin:0;
+	}
+	
+	.agenda-wrap {
+		float:left;
+		width:80%;
+		border-bottom:solid 1px #000;
+		border-top:solid 1px #000;
+		cursor:pointer;
+		padding-top:0.5em;
+	}
+	
+	.agenda-wrap:hover {
+		background-color: rgba(190, 215, 230, 0.7);
+	}
+	
+	.agenda-wrap:hover.on {
+		background:none;
+	}
+	
+	.agenda-desc {
+		width:65%;
+		float:left;
+		padding-right:1em;	
+	}
+	
+	.agenda-full-description {
+		float:left;
+		width:100%;
+		margin-bottom:1em;
+	}
+	
+	.agenda-speaker {
+		background-image:url(images/sponsor-arrow.png);
+		background-position:right;
+		background-repeat:no-repeat;	
+	}
+	
+	.agenda-speaker.on {
+		background-image:url(images/sponsor-arrow1.png);
+	}
+	</style>
+  </head>
+  <body>
+  
+<div class="navbar navbar-fixed-top">
+        <header class="clearfix">
+          <nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
+              
+              <div class="cbp-hsinner">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  
+                  <div class="nav-collapse collapse">
+                    <!-- .nav, .navbar-search, .navbar-form, etc -->
+      
+                      <ul class="cbp-hsmenu">
+                          <li><a href="#">HOME</a></li>
+                          <li>
+                              <a href="#">WATCH</a>
+                              <ul class="cbp-hssubmenu">
+                                  <li><a href="#"><img src="images/1.png" alt="img01"/><span>Delicate Wine</span></a></li>
+                                  <li><a href="#"><img src="images/2.png" alt="img02"/><span>Fine Spirit</span></a></li>
+                                  <li><a href="#"><img src="images/3.png" alt="img03"/><span>Heavenly Ale</span></a></li>
+                                  <li><a href="#"><img src="images/4.png" alt="img04"/><span>Juicy Lemonade</span></a></li>
+                                  <li><a href="#"><img src="images/5.png" alt="img05"/><span>Wise Whiskey</span></a></li>
+                                  <li><a href="#"><img src="images/6.png" alt="img06"/><span>Sweet Rum</span></a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">DEVELOP</a>
+                              <ul class="cbp-hssubmenu cbp-hssub-rows">
+                                  <li><a href="#"><img src="images/7.png" alt="img07"/><span>Lovely Slurp</span></a></li>
+                                  <li><a href="#"><img src="images/8.png" alt="img08"/><span>Lemony Grappa</span></a></li>
+                                  <li><a href="#"><img src="images/9.png" alt="img09"/><span>Eggy Liquor</span></a></li>
+                                  <li><a href="#"><img src="images/10.png" alt="img10"/><span>Fresh Juice</span></a></li>
+                                  <li><a href="#"><img src="images/1.png" alt="img01"/><span>Delicate Wine</span></a></li>
+                                  <li><a href="#"><img src="images/2.png" alt="img02"/><span>Fine Spirit</span></a></li>
+                                  <li><a href="#"><img src="images/3.png" alt="img03"/><span>Heavenly Ale</span></a></li>
+                                  <li><a href="#"><img src="images/4.png" alt="img04"/><span>Juicy Lemonade</span></a></li>
+                                  <li><a href="#"><img src="images/5.png" alt="img05"/><span>Wise Whiskey</span></a></li>
+                                  <li><a href="#"><img src="images/6.png" alt="img06"/><span>Sweet Rum</span></a></li>
+                                  <li><a href="#"><img src="images/1.png" alt="img01"/><span>Delicate Wine</span></a></li>
+                                  <li><a href="#"><img src="images/2.png" alt="img02"/><span>Fine Spirit</span></a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">RESOURCES</a>
+                              <ul class="cbp-hssubmenu">
+                                  <li><a href="#"><img src="images/10.png" alt="img10"/><span>Fresh Juice</span></a></li>
+                                  <li><a href="#"><img src="images/6.png" alt="img06"/><span>Sweet Rum</span></a></li>
+                                  <li><a href="#"><img src="images/9.png" alt="img09"/><span>Eggy Liquor</span></a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">ABOUT</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </header>	    
+    </div>  	
+        <div class="container" style="margin-top:3em;">
+			<div><h2>Agenda</h2></div>
+            <div id="trackBar">
+            	<p>Filter By Track:</p>
+                <ul>
+                	<li id="all">All</li>
+                	<li id="development">Development</li>
+                	<li id="QA">Q & A</li>
+                	<li id="inside">Inside NASA</li>
+                	<li id="mission">Mission</li>
+                </ul>
+            </div>
+            <div id="agendaContainer">
+            	
+                <div class="agenda-item week1 timeline">
+                	<p class="agenda-time">1/1/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Week One Begins</p>
+                    	<div class="agenda-speaker"></div>
+                        <div class="agenda-full-description" style="display:none;"></div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 development">
+                	<p class="agenda-time">1/1/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Live panel discussion: difference between just leading and managing at different levels</p>
+                    	<div class="agenda-speaker">Panel Discussion</div>
+                        <div class="agenda-full-description" style="display:none;">Live panel discussion: difference between just leading and managing at different levels - Robert Lightfoot, Center Director, Division Director, first-line supervisor.</div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 QA">
+                	<p class="agenda-time">1/1/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Live Q & A session with Charles Elachi</p>
+                    	<div class="agenda-speaker">Charles Elachi</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 inside">
+                	<p class="agenda-time">1/1/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Meet the new Astronaut class</p>
+                    	<div class="agenda-speaker">Panel Discussion</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 mission">
+                	<p class="agenda-time">1/1/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">CFO Update</p>
+                    	<div class="agenda-speaker">Beth Robinson</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 development">
+                	<p class="agenda-time">1/4/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">External speaker from OSTP</p>
+                    	<div class="agenda-speaker">Jane Doe</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+
+                <div class="agenda-item week1 timeline">
+                	<p class="agenda-time">1/7/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Week Two Begins</p>
+                    	<div class="agenda-speaker"></div>
+                        <div class="agenda-full-description" style="display:none;"></div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 inside">
+                	<p class="agenda-time">1/7/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">OCT's Invasion</p>
+                    	<div class="agenda-speaker">Jane Doe</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 inside">
+                	<p class="agenda-time">1/8/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">NASA's relationship with commercial partners</p>
+                    	<div class="agenda-speaker">Panel Discussion</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 mission">
+                	<p class="agenda-time">1/12/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Administrator's Update</p>
+                    	<div class="agenda-speaker">Charlie Bolden</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 timeline">
+                	<p class="agenda-time">1/14/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Week Three Begins</p>
+                    	<div class="agenda-speaker"></div>
+                        <div class="agenda-full-description" style="display:none;"></div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 mission">
+                	<p class="agenda-time">1/14/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Chief of Staff's Address Update</p>
+                    	<div class="agenda-speaker">Robert Lightfoot</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+                
+                <div class="agenda-item week1 QA">
+                	<p class="agenda-time">1/16/14</p>
+                    <div class="agenda-wrap">
+                    	<p class="agenda-desc">Meet the new Chief Scientist</p>
+                    	<div class="agenda-speaker">Ellen Stofan</div>
+                        <div class="agenda-full-description" style="display:none;">Some full desciption goes here.</div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/cbpHorizontalSlideOutMenu.min.js"></script>
+	<script>
+		var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
+		
+		$(document).ready(function() {
+			
+			$('.agenda-item').hide();
+			$('.timeline').show();
+			
+			$('#all').click(function() {
+				$('#development').trigger('click');
+				$('#QA').trigger('click');
+				$('#mission').trigger('click');
+				$('#inside').trigger('click');
+				$(this).toggleClass('on');
+			});
+			
+			$('#development').click(function() {
+				$('.development').toggle();
+				$(this).toggleClass('on');
+			});
+			
+			$('#QA').click(function() {
+				$('.QA').toggle();
+				$(this).toggleClass('on');
+			});
+			
+			$('#mission').click(function() {
+				$('.mission').toggle();
+				$(this).toggleClass('on');
+			});
+			
+			$('#inside').click(function() {
+				$('.inside').toggle();
+				$(this).toggleClass('on');
+			});
+			
+			$('.agenda-wrap').click(function() {
+				$(this).children('.agenda-full-description').toggle('fast');
+				$(this).children().toggleClass('on');	
+			});
+			
+        });
+		
+		$(window).resize(function() {
+			
+		});
+    </script>
+</body>
+</html>

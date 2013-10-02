@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+.maincontent {
+	width: 88.875%;
+	max-width: 69em;
+	padding-left: 0.5625%;
+	padding-right: 0.5625%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+
+#column1 {
+width: 30.3797%;
+}
+
+#column2 {
+margin-left: 1.2658%;
+clear: none;
+width: 30.3797%;
+}
+
+#column3 {
+margin-left: 1.2658%;
+clear: none;
+width: 30.3797%;
+}
+
+.fluid {
+clear: both;
+margin-left: 0;
+width: 100%;
+float: left;
+display: block;
+ }
+ 
+ .panel {
+	margin-top:1em; 
+ }
+ 
+.leftsidePanel {
+	width:55%;
+}
+
+.rightsidePanel {
+	margin-left: 5%;
+	width: 40%;	
+	clear: none;
+	background:#666;
+
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Executive Summit 2014</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" href="css/JR.css" media="screen">
+    <script src="js/modernizr.custom.js"></script>
+	<style>
+	body {
+		padding:0;
+	}
+	
+	.container {
+		margin-left:auto;
+		margin-right:auto;	
+	}
+	
+	.jumbotron {
+		position:relative;
+		padding-top:40px;
+		margin-top:5em;	
+	}
+	
+	.jumbotron:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: url(images/astroclass.png) no-repeat;
+		background-size:cover;
+		background-position:center;
+		background-clip:border-box;
+		opacity: 1;
+	}
+	
+	.jumbotron .container {
+		position:relative;
+		z-index:2;	
+		margin-left:20px;
+	}
+	
+	.jumbotron h1 {
+	width: 280px;
+	background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(255,255,255,1.00)),color-stop( 0% , rgba(255,166,0,0.70)));
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	position:relative;
+	top:-40px;
+	color:white;
+	line-height:1.5em;
+	font-size:2em;
+	padding-top:3em;
+	margin:0;
+	padding-left:10px;
+	}
+	
+	.ribbondown {
+		height:0px;
+		position: absolute; 
+		width:0px;
+		left:0;
+		border:solid 145px transparent;
+		border-top:solid 50px rgba(255, 166, 0, 0.7);
+		margin-top:50px;
+	}
+	
+	.ribbonextension {
+		width:290px;
+		height:50px;
+		position:absolute;
+		left:0px;
+			background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(255,255,255,1.00)),color-stop( 0% , rgba(255,166,0,0.70)));
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	}
+	
+	.headshotGrid ul {
+		list-style:none;	
+	}
+	
+	.headshotGrid ul li {
+		float:left;
+		width:117px;
+		height:117px;
+		margin:10px;
+		padding:3px;
+		background-color:rgba(200, 200, 200, 1);	
+	}
+	
+	.headshotArrow {
+		display:none;
+		position:absolute;
+		height:0px;
+		width:0px;
+		border:solid 60px transparent;
+		border-left:solid 50px rgba(50, 50, 162, 0.9);
+	}
+	
+	#logoDiv {
+	background-image: url(images/logoNorm.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: contain;
+	width:235px;
+	height:85px;
+	}
+	
+	@media only screen and (max-width: 480px) {
+		body {
+			width:100%;	
+		}
+		
+		.jumbotron {
+			margin-top:0;
+		}
+		
+		p {
+			margin-left:10px;
+			margin-right:10px;	
+		}
+		
+		
+		.jumbotron h1 {
+			font-size:1.5em;
+			width:190px;
+		}
+		
+	.ribbondown {
+		height:0px;
+		position: absolute; 
+		width:0px;
+		left:0;
+		border:solid 100px transparent;
+		border-top:solid 25px rgba(255, 166, 0, 0.5);;
+		margin-top:50px;
+	}
+	
+	.ribbonextension {
+		width:200px;
+		height:50px;
+		position:absolute;
+		left:0px;
+		background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(255,255,255,1.00)),color-stop( 0% , rgba(255,166,0,0.70)));
+		background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+		background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	}
+
+	.headshotGrid ul li {
+		clear:both;	
+		width:300px;
+		background-color:rgba(50, 50, 162, 0.9);
+		height:100px;
+		padding:10px;
+	}
+	
+	.headshotArrow {
+		 display:block;
+		 margin-top:-30px;
+		 left:355px;	
+	}
+
+	}
+	
+	@media only screen and (max-width: 979px) {
+		p {
+			margin-left:10px;
+			margin-right:10px;	
+		}
+		
+		
+	}
+	
+	@media only screen and (min-width: 980px) {
+		body {
+			width:980px;	
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
+	
+	@media only screen and (max-width: 1024px) {
+		#logoDiv {
+			width:135px;	
+			height:50px;
+		}
+	}
+	
+	
+	
+	</style>
+  </head>
+  <body>
+  
+<div class="navbar navbar-fixed-top">
+        <header class="clearfix">
+          <nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
+              
+              <div class="cbp-hsinner">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  
+                  <div class="nav-collapse collapse">
+                    <!-- .nav, .navbar-search, .navbar-form, etc -->
+      
+                      <ul class="cbp-hsmenu">
+                          <li><div id="logoDiv"></div></li>
+                          <li><a href="#">HOME</a></li>
+                          
+                          <li>
+                              <a href="#">AGENDA</a>
+                              <ul class="cbp-hssubmenu">
+                                  
+                                  <li><a href="#"><span>Delicate Wine</span></a></li>
+                                  <li><a href="#"><span>Fine Spirit</span></a></li>
+                                  <li><a href="#"><span>Heavenly Ale</span></a></li>
+                                  <li><a href="#"><span>Juicy Lemonade</span></a></li>
+                                  <li><a href="#"><span>Wise Whiskey</span></a></li>
+                                  <li><a href="#"><span>Sweet Rum</span></a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">SPEAKERS</a>
+                              <ul class="cbp-hssubmenu cbp-hssub-rows">
+                                  <li><a href="#"><span>Lovely Slurp</span></a></li>
+                                  <li><a href="#"><span>Lemony Grappa</span></a></li>
+                                  <li><a href="#"><span>Eggy Liquor</span></a></li>
+                                  <li><a href="#"><span>Fresh Juice</span></a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="#">CHALLENGES</a>
+                              <ul class="cbp-hssubmenu">
+                                  <li><a href="#"><span>Fresh Juice</span></a></li>
+                                  <li><a href="#"><span>Sweet Rum</span></a></li>
+                                  <li><a href="#"><span>Eggy Liquor</span></a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">THE HALLWAY</a></li>
+                          <!--<li><a href="#">#</a></li>-->
+                          <li><a href="#">PROFILE</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </header>	    
+    </div>  
+    <div class="jumbotron">
+      <div class="container">
+          <h1>MEET <br>
+          THE NEW ASTRONAUT CLASS!
+              <div class="ribbondown" style=""></div>
+              <div class="ribbonextension"></div>
+          </h1>
+          
+      </div>
+    </div>
+    
+    <div class="container-fluid" style="">
+    	<div class="row-fluid">
+        	<div class="span11">
+            	
+                <p>Some description text should go here talking about the corps of astronauts as a whole. Some description text should go here talking about the corps of astronauts as a whole. Some description text should go here talking about the corps of astronauts as a whole. Some description text should go here talking about the corps of astronauts as a whole. Some description text should go here talking about the corps of astronauts as a whole. Some description text should go here talking about the corps of astronauts as a whole. 
+            	</p>
+                
+                <div class="headshotGrid">
+                	<ul>
+                    	<li><img class="hidden-phone" src="images/astro1.jpg" height="100px" width="100px" />John Cassada</li>
+                    	<li><img class="hidden-phone" src="images/astro2.jpg" height="100px" width="100px" />Victor Glover</li>
+                    	<li><img class="hidden-phone" src="images/astro3.jpg" height="100px" width="100px" />Tyler Hague</li>
+                    	<li><img class="hidden-phone" src="images/astro4.jpg" height="100px" width="100px" />Christine Hammock</li>
+                    	<li><img class="hidden-phone" src="images/astro5.jpg" height="100px" width="100px" />Nicole Mann</li>
+                    	<li><img class="hidden-phone" src="images/astro6.jpg" height="100px" width="100px" />Anne McClain</li>
+                    	<li><img class="hidden-phone" src="images/astro7.jpg" height="100px" width="100px" />Jessica Meir</li>
+                    	<li><img class="hidden-phone" src="images/astro8.jpg" height="100px" width="100px" />Andrew Morgan</li>
+                    </ul>
+                </div>
+            
+            </div>
+            <div class="span5">
+            
+            	<section><h4 style="text-align:center;">A video will go here.</h4>
+                	<video width="100%"  muted loop >
+                                    <source src="videos/test.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                  </video>
+                </section>
+            
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/cbpHorizontalSlideOutMenu.min.js"></script>
+	<script>
+		var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
+		
+		$(document).ready(function() {
+			$('.headshotGrid ul li').append('<div class="headshotArrow"></div>');
+			
+        });
+		
+		$(window).resize(function() {
+		});
+    </script>
+</body>
+</html>

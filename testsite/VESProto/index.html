@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Horizontal Slide Out Menu</title>
+		<meta name="description" content="Blueprint: Horizontal Slide Out Menu" />
+		<meta name="keywords" content="horizontal, slide out, menu, navigation, responsive, javascript, images, grid" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/JR.css" />
+		<script src="js/modernizr.custom.js"></script>
+        <script language="javascript">
+		
+		setInterval(function(){document.querySelector('#flip-toggle1').classList.toggle('flip');},5000);
+		setTimeout(function(){
+			setInterval(function(){document.querySelector('#flip-toggle2').classList.toggle('flip');},5000);
+			},600);
+		setTimeout(function(){
+			setInterval(function(){document.querySelector('#flip-toggle3').classList.toggle('flip');},5000);
+			},1200);
+		</script>
+        <style>
+			/* entire container, keeps perspective */
+			.flip-container {
+				-webkit-perspective: 1000;
+			}
+				/* flip the pane when hovered */
+				/*.flip-container:hover .flipper, .flip-container.hover .flipper {
+					-webkit-transform: rotateY(180deg);
+				}*/
+				
+			.flip-container.flip .flipper {
+				-webkit-transform: rotateY(180deg);
+			}
+			
+			.flip-container, .front, .back {
+				height:331px;
+				width:100%;
+			}
+			
+			/* flip speed goes here */
+			.flipper {
+				-webkit-transition: 1s;
+				-webkit-transition-timing-function: ease-out;
+				-webkit-transform-style: preserve-3d;
+				position: relative;
+			}
+			
+			/* hide back of pane during swap */
+			.front, .back {
+				-webkit-backface-visibility: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			/* front pane, placed above back */
+			.front {
+				z-index: 2;
+				background:#999;
+			}
+			
+			/* back, initially hidden pane */
+			.back {
+				background:#75BAF4;
+				-webkit-transform: rotateY(180deg);
+			}
+		</style>
+        <style>
+
+* {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+h3 {
+  color:#fff;
+  font-weight:normal;
+}
+
+.ribbonPanel {
+ position:relative;
+}
+
+#ribbon {
+  padding:0 0 10px 0;
+  position:absolute;
+  right:0.5em;
+  top:-0.5em;
+  width:40px;
+  float:right;
+  overflow:visible;
+  z-index:10;
+}
+
+  #ribbon div {
+    background:#bb3a34;
+    background: linear-gradient(#CD5124 0%, #F05F29 100%);
+    color:#fff;
+    padding:0.5em 0;
+    text-align:center;
+    text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  #ribbon div:after {
+    border-left: 20px solid #F05F29;
+    border-right: 20px solid #F05F29;
+    border-bottom: 10px solid transparent;
+    bottom:0;
+    content:'';
+    height: 0;
+    left:0;
+    position:absolute;
+    width: 0;
+  }
+  
+  #siteTitle {
+	text-align:center;
+	color:#4D4D4D;  
+  }
+  
+.hoverPanel {
+		position:relative;
+		overflow:hidden;	
+	}
+	
+	.hoverPanel img {
+		width:100%;
+		display:block;
+		position:relative;	
+	}
+	
+	.hoverPanel .hoverPanelContent {
+		position:absolute;
+		top:auto;
+		bottom:0;
+		width:100%;
+		height:100%;
+		opacity:0;
+		-webkit-transform:translateY(100%);
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.6s;
+	}
+	
+	.hoverPanel .hoverPanelContent h2 {
+		color:#ffffff;
+		font-size:2em;
+		position:absolute;
+		bottom:0;
+		top:auto;	
+		padding:0.5em;	
+		margin:0;			
+	}
+	
+	.hoverPanel:hover .hoverPanelContent {
+		
+		opacity:1;
+		-webkit-transform:translateY(0)	;
+		-webkit-transition: opacity 0.1s, -webkit-transform 0.6s;
+	}
+	
+	.hoverPanel:hover .hoverPanelContent:after {
+		background:url(images/hoverOrange.png);
+		background-size:cover;
+		content: "";
+		opacity: 1;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}        
+    </style>
+
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
+					<div class="cbp-hsinner">
+						<ul class="cbp-hsmenu">
+							<li><a href="#">HOME</a></li>
+							<li>
+								<a href="#">WATCH</a>
+								<ul class="cbp-hssubmenu">
+									<li><a href="#"><img src="images/1.png" alt="img01"/><span>Delicate Wine</span></a></li>
+									<li><a href="#"><img src="images/2.png" alt="img02"/><span>Fine Spirit</span></a></li>
+									<li><a href="#"><img src="images/3.png" alt="img03"/><span>Heavenly Ale</span></a></li>
+									<li><a href="#"><img src="images/4.png" alt="img04"/><span>Juicy Lemonade</span></a></li>
+									<li><a href="#"><img src="images/5.png" alt="img05"/><span>Wise Whiskey</span></a></li>
+									<li><a href="#"><img src="images/6.png" alt="img06"/><span>Sweet Rum</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">DEVELOP</a>
+								<ul class="cbp-hssubmenu cbp-hssub-rows">
+									<li><a href="#"><img src="images/7.png" alt="img07"/><span>Lovely Slurp</span></a></li>
+									<li><a href="#"><img src="images/8.png" alt="img08"/><span>Lemony Grappa</span></a></li>
+									<li><a href="#"><img src="images/9.png" alt="img09"/><span>Eggy Liquor</span></a></li>
+									<li><a href="#"><img src="images/10.png" alt="img10"/><span>Fresh Juice</span></a></li>
+									<li><a href="#"><img src="images/1.png" alt="img01"/><span>Delicate Wine</span></a></li>
+									<li><a href="#"><img src="images/2.png" alt="img02"/><span>Fine Spirit</span></a></li>
+									<li><a href="#"><img src="images/3.png" alt="img03"/><span>Heavenly Ale</span></a></li>
+									<li><a href="#"><img src="images/4.png" alt="img04"/><span>Juicy Lemonade</span></a></li>
+									<li><a href="#"><img src="images/5.png" alt="img05"/><span>Wise Whiskey</span></a></li>
+									<li><a href="#"><img src="images/6.png" alt="img06"/><span>Sweet Rum</span></a></li>
+									<li><a href="#"><img src="images/1.png" alt="img01"/><span>Delicate Wine</span></a></li>
+									<li><a href="#"><img src="images/2.png" alt="img02"/><span>Fine Spirit</span></a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">RESOURCES</a>
+								<ul class="cbp-hssubmenu">
+									<li><a href="#"><img src="images/10.png" alt="img10"/><span>Fresh Juice</span></a></li>
+									<li><a href="#"><img src="images/6.png" alt="img06"/><span>Sweet Rum</span></a></li>
+									<li><a href="#"><img src="images/9.png" alt="img09"/><span>Eggy Liquor</span></a></li>
+								</ul>
+							</li>
+							<li><a href="#">ABOUT</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>	
+			<div class="main">
+				
+                <div class="maincontent">
+                <div id="column1" class="fluid">
+                <!--- column 1 content begins --->
+                
+                    <!--- flipper container begins --->
+                    <div class="flip-container" id="flip-toggle1">
+                        <div class="flipper">
+                            <div class="front">
+                               <img src="images/socialmedia.png" width="100%"/><!-- front content -->
+                            </div>
+                            <div class="back">
+                                <video width="100%" autoplay muted loop >
+                                  <source src="videos/test.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video><br>
+                                <!-- back content -->
+                            </div>
+                        </div>
+                    </div><!--- flipper container ends --->
+                    
+                    <div class="panel" style="height:173px;">
+                    	<div class="leftsidePanel fluid" style="background:url(images/silence.png); background-size:contain; background-repeat:no-repeat; height:173px;">
+                        	
+                        </div>
+                        <div class="rightsidePanel fluid" style="height:173px;">
+                        
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                    	<video width="100%" id="aVid" controls >
+                          <source src="videos/test2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    
+                </div><!--- column 1 ends --->
+                <div id="column2" class="fluid">
+                <!--- column 2 content begins --->
+
+                	<div id="siteTitle">
+						<h1>Discover the Possiblites.</h1>
+                        This will be fun. Trust us.
+                    </div>
+
+                    <div class="ribbonPanel panel">
+                      
+                      <div class="hoverPanel">
+                      	<img src="images/bolden.png">
+                      	<a href="#"><div class="hoverPanelContent" style="height:40%">
+                            <h2>CHAT<br>
+							WITH<br>
+                            CHARLIE</h2>
+                        </div></a>
+                      </div>
+                      
+                      <div id="ribbon">
+                        <div>L<br>I<br>V<br>E</div>
+                      </div>
+                      
+                    </div>
+                    
+                    <!--- flipper container begins --->
+                    <div class="flip-container panel" id="flip-toggle2">
+                        <div class="flipper">
+                            <div class="front">
+                               Some front content<!-- front content -->
+                            </div>
+                            <div class="back">
+                                <video autoplay muted loop >
+                                  <source src="videos/test.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video><br>
+                                Some Back Content<!-- back content -->
+                            </div>
+                        </div>
+                    </div><!--- flipper container ends --->
+                    
+                </div><!--- column 2 ends --->
+                <div id="column3" class="fluid">
+                <!--- column 3 content begins --->
+                    
+                    <div class="" style="height:173px;">
+                    	<div class="leftsidePanel fluid" style="background:url(images/silence.png); background-size:contain; background-repeat:no-repeat; height:173px;">
+                        	
+                        </div>
+                        <div class="rightsidePanel fluid" style="height:173px;">
+                        
+                        </div>
+                    </div>
+                    <!--- flipper container begins --->
+                    <!--<div class="flip-container" id="flip-toggle3">
+                        <div class="flipper">
+                            <div class="front">
+                               
+                               <div class="hoverPanel">
+                                    <img src="images/astroclass.png"/>
+                                    <div class="hoverPanelContent">
+                                        Some Links will go here
+                                    </div>
+                    			</div>
+                            </div>
+                            <div class="back">
+                                <div>
+                                    <img src="images/socialmedia.png" width="100%"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>--><!--- flipper container ends --->
+                
+                    <div class="hoverPanel panel">
+                        <img src="images/astroclass.png"/>
+                        <a href="#"><div class="hoverPanelContent">
+                            <h2>NEW<br>
+							ASTRONAUT<br>
+                            CLASS</h2>
+                        </div></a>
+                    </div>
+                
+                </div><!--- column 3 ends --->
+                
+                
+                	
+                </div>
+			</div>
+		</div>
+		<script src="js/cbpHorizontalSlideOutMenu.min.js"></script>
+		<script>
+			var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
+			var myvideo = getElementById('aVid');
+			myvideo.addEventListener('canplay', function(e) {
+			  this.volume = 0.4;
+			}, false);
+		</script>
+	</body>
+</html>
