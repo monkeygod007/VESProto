@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+
+#body,p,a,h1,h2,h3 {
+	font-family: 'Cabin', sans-serif;
+	
+	}
+
+#logoDiv {
+	background-image: url(../images/logoNorm.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: contain;
+	width:180px;
+	height:85px;
+}
+a #nasaLogo {
+	background-image: url(../images/nasaLogo.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: contain;
+	width:80px;
+	height:60px;
+	display: block;
+  	float: right;
+  	padding: 0px;
+  	margin-left: -20px;
+	margin-top:30px;
+}
+
+@media only screen and (max-width: 600px) {
+		#logoDiv {
+			background-image: url(../images/logoMob.png);
+			width:109px;	
+			height:45px;
+		}
+	}
+
+#notifyBanner {
+	position:absolute;
+	display:block;
+	background:url(../images/achieveBanner.png) no-repeat;
+	background-position:right;
+	background-size: contain;
+	top:0;
+	height:60px;
+	z-index:2000000;
+	float:right;
+	
+	}
+#notifyBanner p {
+	padding-top:10px;
+	color:#f69100;
+	padding-right:60px;
+}
+.navbar-inverse .navbar-inner {
+background-image:none;
+background-color:#FFF;
+border-bottom:1em solid #4d4d4d;
+}
+.navbar .nav {
+	margin-top:60px;
+	height:20px;
+	font-weight:600;
+	font-size:1em;
+}
+.navbar .nav > li {
+	padding:0px 10px;
+}
+
+.navbar .nav > li > a {
+	color:#4c4c4c;
+	text-shadow:none;
+	padding:10px 0px 4px 0px;
+	}
+	
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav > li > a:hover, .navbar-inverse .nav .active > a:focus {
+	color:#4c4c4c;
+	border-bottom:#ffb64e solid .5em;
+	background:none;
+	box-shadow:none;
+	}
+ .navbar-inverse .nav .active > a:focus,.navbar-inverse .nav .active > a {
+	color:#ffb64e; 
+	}	
+.navbar .nav > li > a.profile {
+	background-image:url(../images/profileIcon.png);
+	background-size:25px 25px;
+	background-repeat:no-repeat;
+	text-indent:30px;
+	height:20px;
+	}
+.navbar .nav > li > a.profile:hover {
+	border-bottom:none;
+	}
+.navbar .nav > li > a.random {
+	background-image: url(../images/diceIcon.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: contain;
+	width:46px;
+	height:20px;
+	text-indent:-9999px;
+	padding-top:0px;
+}
+
+.navbar .nav > li > a.random:hover  {
+	background-image: url(../images/diceIcon_hover.png);
+	border:none;
+
+}
+
+.navbar .btn {
+	margin-top:20px;
+	}
+
+.jumbotron:after {
+    background:url(../images/astro_big.jpg) no-repeat scroll center center rgba(0, 0, 0, 0);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.container-fluid {
+	margin-top:10em;
+	}
