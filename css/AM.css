@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#body,p,a,h1,h2,h3 {
+	font-family: 'Cabin', sans-serif;
+	}
+
+#vesHeader {
+	background-color:#FFF;
+}
+
+#topNav.container-fluid  {
+	margin-top:0;
+	height: 100px;
+	padding: 0px
+}
+
+.navMiddleTop {
+	width:100%;
+
+}
+
+.navMiddleBottom {
+	width:100%;
+}
+
+.headerShadow {
+	width: 100%;
+	height: 10px;
+	background-image:url(../images/headerShadow.png);
+	background-size: 100% 10px;
+	background-repeat: repeat-x;
+}
+
+.span2 {
+	margin:0;
+}
+
+.span4 {
+	margin:0;
+}
+
+.span12 {
+	height:100px;
+}
+
+.navContainer {
+	width:85%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.adminContainer {
+	width:35%;
+	margin-left:auto;
+	float:none;
+}
+
+
+
+
+/* From Stephen's CSS */
+.navbar .nav {
+	height:20px;
+	font-weight:600;
+	font-size:1em;
+	margin: 20px 0px 0 0;
+	float:none;	
+}
+
+.navbar .nav > li {
+	padding:0px 15px;
+}
+
+.navbar .nav > li > a {
+	color:#999;
+	text-shadow:none;
+	padding:10px 0px 0px 0px;
+	}
+	
+.navbar .nav > a:hover, .navbar .nav > li > a:hover, .navbar .nav > a:focus {
+	color:#999;
+	border-bottom:#ffb64e solid .35em;
+	background:none;
+	box-shadow:none;
+	}
+	
+ .navbar .nav .active > a:focus,.navbar .nav .active > a,.navbar .nav .active > a:hover {
+	color:#f16c01;
+	border-bottom:#f16c01 solid .35em; 
+	background:none;
+	box-shadow:none;
+	}	
+	
+.navbar .nav > li > a.profile {
+	font-weight:400;
+	font-size:.85em;
+	background-image:url(../images/profileIcon.png);
+	background-size:25px 25px;
+	background-repeat:no-repeat;
+	text-indent:30px;
+	height:20px;
+	margin: -10px 0px 0 0;
+	}
+
+.navbar .nav > li > a.profile:hover {
+	border-bottom:none;
+	}
+
+.navbar .nav > li > a.random {
+	background-image: url(../images/diceIcon.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: contain;
+	width:46px;
+	height:20px;
+	text-indent:-9999px;
+	padding-top:0px;
+	margin: -5px 0px 0 0;
+}
+
+.navbar .nav > li > a.random:hover  {
+	background-image: url(../images/diceIcon_hover.png);
+	border:none;
+	margin: -5px 0px 0 0;
+
+}
+
+.navbar .btn {
+	margin-top:20px;
+	}
