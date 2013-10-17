@@ -1,9 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 
-#body,p,a,h1,h2,h3 {
+#body,p,a,h1,h2 {
 	font-family: 'Cabin', sans-serif;
 	}
+p,h3,h4 {
+	font-family: 'Source Sans Pro', sans-serif;
+}
 
 #vesHeader {
 	background-color:#FFF;
@@ -15,6 +18,18 @@
 	padding: 0px
 }
 
+#logoDiv.span4, #logoDiv.span16 {
+	background-image: url(../images/logoNorm.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: contain;
+/*	width:180px;
+*/	height:85px;
+	margin-top:8px;
+}
+#logoDiv.span16 {
+	display:none;
+}
 .navMiddleTop {
 	width:100%;
 
@@ -24,12 +39,31 @@
 	width:100%;
 }
 
-.headerShadow {
+#logoDiv.span2 {
+	background-image: url(../images/nasaLogo.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: contain;
+/*	width:80px;
+*/	height:65px;
+	display: block;
+  	padding: 0px;
+	margin-top:20px;
+}
+
+.headerShadow, hr {
 	width: 100%;
 	height: 10px;
 	background-image:url(../images/headerShadow.png);
 	background-size: 100% 10px;
 	background-repeat: repeat-x;
+}
+hr {
+	margin-bottom:0px
+
+}
+.headerShadowMobile {
+	display:none;
 }
 
 .span2 {
@@ -45,7 +79,7 @@
 }
 
 .navContainer {
-	width:85%;
+	width:90%;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -114,19 +148,160 @@
 	background-position: 0% 0%;
 	background-size: contain;
 	width:46px;
-	height:20px;
+	height:28px;
+	margin-top:-3px;
 	text-indent:-9999px;
 	padding-top:0px;
-	margin: -5px 0px 0 0;
 }
 
 .navbar .nav > li > a.random:hover  {
 	background-image: url(../images/diceIcon_hover.png);
 	border:none;
-	margin: -5px 0px 0 0;
 
 }
 
 .navbar .btn {
 	margin-top:20px;
 	}
+
+#notifyBanner {
+	position:absolute;
+	background:url(../images/achieveBanner.png) no-repeat;
+	background-position:right;
+	background-size: contain;
+	top:0;
+	right:350px;
+	height:60px;
+	display:none;
+	}
+
+#notifyBanner.unlocked {
+	display:block;
+	}
+	
+#notifyBanner a {
+	padding-top:10px;
+	color:#f69100;
+	padding-right:60px;
+}
+#notifyBanner a:hover {
+	color:#f16c01;
+}
+@media only screen and (max-width: 911px) {
+		#topNav.container-fluid {
+			height:65px;
+			background:#CCC;
+		}
+		#logoDiv.span4 {
+			background-image: url(../images/logoMob.png);
+			height:45px;
+			float:left;
+			position:absolute;
+			top:0;
+			left:5px;
+			display:none
+		}
+		#logoDiv.span2 {
+			height:45px;
+			position:absolute;
+			top:-10px;
+			right:5px;
+			width:55px;
+		}
+		#logoDiv.span4 {
+			background-image: url(../images/logoMob.png);
+			height:45px;
+		}
+	.navbar .nav > li > a {
+		font-size:100%;
+		}
+	  .nav-collapse,
+	  .nav-collapse.collapse {
+		height: 0;
+		overflow: hidden;
+  }
+	  .navbar .btn-navbar {
+    	display: block;
+		background:#ffb64e;
+		height:65px;
+		width:65px;
+		position:absolute;
+		margin:0;
+		box-shadow:none;
+		border-radius:0;
+		left:0;
+  }
+	  .icon-bar {
+	  	box-shadow:none;
+		margin-left:12px;
+	}
+	
+	}
+@media only screen and (max-width: 480px) {
+body {
+	padding:0px;
+}
+#logoDiv.span16 {
+			height:110px;
+			display:block;
+			background:url(../images/logoNorm.png) #fff no-repeat;
+			background-size: contain;
+			background-position:center;
+			margin:0px;
+			padding:0px;
+			position:relative;
+			margin:0 auto;
+		}
+#page.container-fluid {
+	width:90%;
+	padding-top:18px;
+}
+
+.headerShadow {
+	display:none;
+}
+.headerShadowMobile {
+	width: 100%;
+	height: 10px;
+	background-image:url(../images/headerShadow.png);
+	background-size: 100% 10px;
+	background-repeat: repeat-x;
+	display:block;
+}
+}
+/*------END HEADER STYLES-------------
+----------------
+-------------------------------------*/
+
+#page.container-fluid {
+	margin-top:9em;
+}
+@media only screen and (max-width: 911px) {
+#page.container-fluid {
+	margin-top:8em;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+#page.container-fluid {
+	margin-top:6em;
+}
+}
+}
+@media only screen and (max-width: 480px) {
+#page.container-fluid {
+	margin-top:0px;
+}
+
+}
+
+.jumbotron > .container-fluid {
+	margin-top:0em;
+}
+
+
+.footer {
+	text-align: center;
+padding: 30px 0px;
+margin-top: 70px;
+border-top: 1px solid rgb(229, 229, 229);
+background-color: rgb(245, 245, 245);
+}
