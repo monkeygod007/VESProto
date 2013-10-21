@@ -55,7 +55,7 @@ p.menubtn {
 	margin-top:20px;
 }
 
-.headerShadow, hr {
+.headerShadow {
 	width: 100%;
 	height: 10px;
 	background-image:url(../images/headerShadow.png);
@@ -63,8 +63,12 @@ p.menubtn {
 	background-repeat: repeat-x;
 }
 hr {
-	margin-bottom:0px
-
+	margin-bottom:0px;
+	background-image:url(../images/hrShadow3.png);
+	background-size: 100% 10px;
+	background-repeat: repeat-x;
+	width: 100%;
+	height: 10px;
 }
 .headerShadowMobile {
 	display:none;
@@ -84,8 +88,8 @@ hr {
 
 .navContainer {
 	width:90%;
-	margin-left:auto;
-	margin-right:auto;
+	/*margin-left:auto;
+	margin-right:auto;*/
 }
 
 
@@ -184,7 +188,7 @@ hr {
 	}
 	
 #notifyBanner a {
-	padding:19px 60px 0px 0px;
+	padding:17px 60px 0px 0px;
 	color:#f69100;
 	display:block;
 }
@@ -304,9 +308,10 @@ body {
 
 
 .footer {
-	text-align: center;
+text-align: center;
 padding: 30px 0px;
 margin-top: 70px;
 border-top: 1px solid rgb(229, 229, 229);
-background-color: rgb(245, 245, 245);
+background-color:#666;
+color:#CCC;
 }
