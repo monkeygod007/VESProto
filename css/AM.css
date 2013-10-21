@@ -149,7 +149,7 @@ hr {
 	background-size: contain;
 	width:46px;
 	height:28px;
-	margin-top:-3px;
+	margin-top:-4px;
 	text-indent:-9999px;
 	padding-top:0px;
 }
@@ -180,9 +180,9 @@ hr {
 	}
 	
 #notifyBanner a {
-	padding-top:10px;
+	padding:19px 60px 0px 0px;
 	color:#f69100;
-	padding-right:60px;
+	display:block;
 }
 #notifyBanner a:hover {
 	color:#f16c01;
