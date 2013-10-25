@@ -1,7 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
+body {
+	font-size:1em;
+	}
 
-#body,p,a,h1,h2 {
+body,p,a,h1,h2 {
 	font-family: 'Cabin', sans-serif;
 	}
 p,h3,h4 {
@@ -285,6 +288,49 @@ body {
 #page.container-fluid {
 	margin-top:9em;
 }
+
+.jumbotron {
+		position:relative;
+		padding-top:40px;
+		margin-top:5em;	
+	}
+
+	
+.jumbotron h1 {
+	width: 280px;
+	background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(255,255,255,1.00)),color-stop( 0% , rgba(255,166,0,0.70)));
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	position:relative;
+	top:-40px;
+	color:white;
+	line-height:1.5em;
+	font-size:2em;
+	padding-top:3em;
+	margin:0;
+	padding-left:10px;
+	}
+	
+.ribbondown {
+		height:0px;
+		position: absolute; 
+		width:0px;
+		left:0;
+		border:solid 145px transparent;
+		border-top:solid 50px rgba(255, 166, 0, 0.7);
+		margin-top:50px;
+	}
+	
+.ribbonextension {
+		width:290px;
+		height:50px;
+		position:absolute;
+		left:0px;
+			background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(255,255,255,1.00)),color-stop( 0% , rgba(255,166,0,0.70)));
+	background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(255,166,0,0.70) 0%);
+	}
+	
 @media only screen and (max-width: 911px) {
 #page.container-fluid {
 	margin-top:8em;
@@ -300,12 +346,51 @@ body {
 	margin-top:0px;
 }
 
+.jumbotron {
+			margin-top:0px;
+		}
+		
+		p {
+			margin-left:10px;
+			margin-right:10px;	
+		}
+		
+		
+		.jumbotron h1 {
+			font-size:1.5em;
+			width:190px;
+			padding-top:0;
+		}
+		
+	.ribbondown {
+		height:0px;
+		position: absolute; 
+		width:0px;
+		left:0;
+		border:solid 100px transparent;
+		border-top:solid 25px rgba(255, 166, 0, 0.5);;
+		margin-top:0px;
+	}
+	
+	.ribbonextension {
+		display:none;
+	}
+
+
 }
 
-.jumbotron > .container-fluid {
+.jumbotron > .container-fluid, .container-fluid.recommend  {
 	margin-top:0em;
 }
 
+.jumbotron.bigImage {
+	background:url(../images/bigImage.jpg) no-repeat;
+	background-size:cover;
+	background-position:center;
+}
+.jumbotron.bigimage.astro {
+	background:url(../images/astro_big.jpg) no-repeat;
+}
 
 .footer {
 text-align: center;
