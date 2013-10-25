@@ -388,10 +388,13 @@ body {
 	background-size:cover;
 	background-position:center;
 }
+/*-------Added jumbotron Images here -------------*/
+
 .jumbotron.bigimage.astro {
 	background:url(../images/astro_big.jpg) no-repeat;
 }
 
+/*-------End jumbotron Images -------------*/
 .footer {
 text-align: center;
 padding: 30px 0px;
