@@ -12,8 +12,6 @@
 <link href='http://fonts.googleapis.com/css?family=Cabin:400,600' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 <script src="js/modernizr.custom.js"></script>
-<script src="js/cbpHorizontalSlideOutMenu.min.js"></script>
-
 </head>
 
 <body>
@@ -22,9 +20,9 @@
 <div class="navbar navbar-fixed-top">
   <header id="vesHeader" class="clearfix">
     <div id="topNav" class="container-fluid">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span><p class="menubtn">MENU</p> </button>
       <div class="row-fluid">
-        <div id ="logoDiv" class="span4"></div>
+        <div id ="logoDiv" class="span4"></div>      
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span><p class="menubtn">MENU</p> </button>
         <div class="nav-collapse collapse">
           <div class="span10">
             <div class="navMiddleTop">
@@ -39,7 +37,8 @@
               </div>
             </div>
             <div class="navMiddleBottom">
-              <div class="navContainer" id="cbp-hsmenu-wrapper">
+              <div class="navContainer">
+               <nav class="cbp-hsmenu-wrapper" id="cbp-hsmenu-wrapper">
                 <ul class="nav">
                   <li class="active"> <a href="#">HOME</a> </li>
                   <li class=""> <a href="#">OVERVIEW</a> </li>
@@ -69,6 +68,7 @@
                     </ul>-->
                   </li>
                 </ul>
+                </nav>
               </div>
             </div>
           </div>
@@ -151,7 +151,9 @@
     <p>text testtext testtext testtext testtext test</p>
     </div>
 </footer>
-<script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/cbpHorizontalSlideOutMenu.min.js"></script><script>
         var menu = new cbpHorizontalSlideOutMenu( document.getElementById( 'cbp-hsmenu-wrapper' ) );
 		
 	/*	setInterval(function(){document.querySelector('#flip-toggle1').classList.toggle('flip');},5000);
