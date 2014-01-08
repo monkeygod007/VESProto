@@ -340,12 +340,20 @@ body {
 #page.container-fluid {
 	margin-top:8em;
 }
+}
 @media (min-width: 480px) and (max-width: 767px) {
 #page.container-fluid {
 	margin-top:6em;
 }
+.navMiddleTop {
+	display:none;
+	}
+	.navbar .nav {
+		height:100%;
+		margin:60px 0px 0px 15px;
 }
 }
+
 @media only screen and (max-width: 480px) {
 #page.container-fluid {
 	margin-top:0px;
@@ -380,7 +388,14 @@ body {
 	.ribbonextension {
 		display:none;
 	}
+.navMiddleTop {
+	display:none;
+	}
+.navbar .nav {
+		height:100%;
+		margin:60px 0px 0px 15px;
 
+}
 
 }
 
