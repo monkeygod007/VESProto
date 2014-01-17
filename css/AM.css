@@ -39,6 +39,7 @@ p.menubtn {
 }
 .navMiddleTop {
 	width:100%;
+	height:30px;
 
 }
 
@@ -127,13 +128,15 @@ hr {
 .navbar .nav > a:hover, .navbar .nav > li > a:hover, .navbar .nav > a:focus {
 	color:#999;
 	border-bottom:#ffb64e solid .35em;
+	border-radius:0px;
 	background:none;
 	box-shadow:none;
 	}
 	
  .navbar .nav .active > a:focus,.navbar .nav .active > a,.navbar .nav .active > a:hover {
 	color:#f16c01;
-	border-bottom:#f16c01 solid .35em; 
+	border-bottom:#f16c01 solid .35em;
+	border-radius:0px;
 	background:none;
 	box-shadow:none;
 	}	
@@ -230,6 +233,8 @@ hr {
 	  .nav-collapse.collapse {
 		height: 0;
 		overflow: hidden;
+		margin-top:65px;
+		text-align:center;
   }
 	  .navbar .btn-navbar {
     	display: block;
@@ -466,3 +471,6 @@ border-top: 1px solid rgb(229, 229, 229);
 background-color:#666;
 color:#CCC;
 }
+
+/*-------NAV TWEAK-------------*/
+.cbp-hsinner {border:0px none; }
